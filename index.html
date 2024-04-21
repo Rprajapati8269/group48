@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Genre Classification</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .section {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .team-members {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            margin: 10px;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        .team-member {
+        margin: 10px;
+        text-align: center;
+        padding: 20px;
+        background-color: #3498db;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        /* Add additional styling here */
+        color: #fff; /* Text color */
+        font-size: 18px; /* Font size */
+        font-weight: bold; /* Font weight */
+    }
+
+        .project-info {
+            margin-top: 50px;
+            background-color: rgba(41, 128, 185, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .project-info a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 25px;
+            background: linear-gradient(to right, #9b59b6, #e74c3c);
+            transition: background 0.3s ease-in-out;
+            font-size: 18px;
+        }
+        .project-info a:hover {
+            background: linear-gradient(to right, #e74c3c, #9b59b6);
+            transform: translateY(-3px);
+        }
+        .additional-options {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .additional-options a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 20px;
+            border-radius: 25px;
+            background: linear-gradient(to right, #2ecc71, #27ae60);
+            transition: background 0.3s ease-in-out;
+            font-size: 18px;
+        }
+        .additional-options a:hover {
+            background: linear-gradient(to right, #27ae60, #2ecc71);
+            transform: translateY(-3px);
+        }
+        .summary-section {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .summary-section h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .summary-section p {
+            color: #fff;
+            font-size: 16px;
+        }
+        footer {
+            margin-top: 50px;
+            background-color: rgba(41, 128, 185, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            color: #fff;
+            font-size: 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Music Genre Classification</h1>
+        <div class="team-members">
+            <div class="team-member">Rahul K. Prajapati</div>
+            <div class="team-member">Rahul Saha</div>
+            <div class="team-member">Muskan Gautam</div>
+            <div class="team-member">Samarth Sala</div>
+            
+        </div>
+        <div class="section">
+            <h2>Project Information</h2>
+            <div class="project-info">
+                <a href="https://www.overleaf.com/project/660664aa46321ae9ae903011" style="width: 100px; height: 40px;">Report</a>
+                <a href="https://colab.research.google.com/drive/1rSFuqwvEouizyY8SfUT48ZppZfcgPFAC?usp=sharing" style="width: 100px; height: 40px;">Demo code</a>
+                <a href="https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification" style="width: 100px; height: 40px;">Dataset</a>
+                <a href="https://github.com/TechEnthu0612/samarth0612.github.io/tree/main" style="width: 100px; height: 40px;">Github Code</a>
+                <a href="https://www.youtube.com/watch?v=5S0CmlHMFng&ab_channel=RahulKumarPrajapati%28B20CS048%29" style="width: 140px; height: 40px;">Spotlight Video</a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Abstract</h2>
+            <p>This project proposes an automated music genre classification system
+                using machine learning techniques. The system uses a dataset of
+                audio samples to extract features, which are then used to train various
+                algorithms. The system evaluates the performance of each classifier
+                and provides real-time feedback. The system’s effectiveness is
+                demonstrated, and the results suggest potential for further
+                enhancements. This project contributes to the advancement of
+                automated music genre classification systems, improving music
+                content organization and retrieval in digital libraries and streaming
+                platforms.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>Music genre classification aims to classify the audio files in certain categories of sound to
+                which they belong. The application requires automation to reduce the manual error and time
+                because if we have to classify the music manually then one has to listen out each file for the
+                complete duration. So to automate the process we use Machine learning and deep learning
+                algorithms. We are given multiple audio files, and the task is to categorize each audio file in
+                a certain category like audio belongs to Disco, hip-hop, etc. The music genre classification
+                can be built using different approaches.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Model Used</h2>
+            <p><p>1. Decision Trees (DecisionTreeClassifier) </p>
+                <p>2. K-Nearest Neighbors (KNN Classifier) </p>
+                <p>3. Naive Bayes (GaussianNB) </p>
+                <p>4. Stochastic Gradient Descent (SGDClassifier)</p>
+                <p>5. Random Forest (RandomForestClassifier) </p>
+                <p>6. Support Vector Machine (SVC)</p>
+        </div>
+
+        <div class="section">
+            <h2>Best Model</h2>
+            <p>We used K-Nearest Neighbours algorithm (KNN Classifier) because various researches
+                prove it is one of the best algorithms to give good performance and till time along with optimized models organizations uses this algorithm in recommendation systems as support.
+                K-Nearest Neighbour KNN is a machine learning algorithm used for regression, and classification. It is also known as the lazy learner algorithm. It simply uses a distance-based
+                method to find the K number of similar neighbours to new data and the class in which the  
+                majority of neighbours lies, it results in that class as an output. Now let us get our system
+                ready for project implementation. Dataset Overview The dataset we will use is named the
+                GTZAN genre collection dataset which is a very popular audio collection dataset. It contains
+                approximately 1000 audio files that belong to 10 different classes. Each audio file is in .wav
+                format (extension). The classes to which audio files belong are Blues, Hip-hop, classical,
+                pop, Disco, Country, Metal, Jazz, Reggae, and Rock.</p>
+        </div>
+        <div class="additional-options">
+            <a href="model_accuracy.html">Model Accuracy</a>
+            <a href="graphical_result.html">Graphical Result</a>
+        </div>
+        <div class="summary-section">
+            <h2>Summary</h2>
+            <p>Throughout this project, we began by loading and exploring a dataset containing features
+                related to music genres, examining its contents and class distribution. Following this, we
+                preprocessed the data by scaling features and splitting it into training and testing sets for
+                model evaluation. We defined and evaluated several machine learning models including
+                Naive Bayes, Stochastic Gradient Descent, K-Nearest Neighbors, Decision Trees, Random
+                Forest, and Support Vector Machine, assessing their performances using accuracy scores
+                and visualizing confusion matrices. Additionally, we compared the accuracies of these models through a bar plot, providing insights into their relative performance. Visualizations of
+                class distributions shed light on the dataset composition. Lastly, we conducted error analysis, focusing on the Random Forest model, identifying and visualizing error samples to
+                understand where the model struggles and where improvements could be made. Overall,
+                this comprehensive approach allowed us to gain a deep understanding of the dataset, model
+                performances, and potential areas for refinement in the classification task.
+            </p>
+        </div>
+        <footer>
+            <p>Made with <span style="color: #ff4d4d;">&hearts;</span> by Rahul K. Prajapati @2024</p>
+        </footer>
+    </div>
+</body>
+</html>
